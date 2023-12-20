@@ -5,8 +5,10 @@
 
     </div>
     <div class="row" v-if="about">
-
-    </div>
+      <p class="lead" v-for="title in about" :key="title">
+        {{ title }}
+      </p>   
+     </div>
 
   </div>
 </template>

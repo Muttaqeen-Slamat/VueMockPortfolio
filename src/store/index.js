@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-let dataurl= 'https://muttaqeen-slamat.github.io/VueMockData/data/'
+let dataUrl = 'https://muttaqeen-slamat.github.io/VueMockData/data/'
 export default createStore({
   state: {
     about: null,
@@ -29,7 +29,7 @@ export default createStore({
   },
   actions: {
     async fetchAbout(context){
-      let res = await fetch(dataurl)
+      let res = await fetch(dataUrl)
       let {about} = await res.json()
       context.commit('setAbout', about)
     }
